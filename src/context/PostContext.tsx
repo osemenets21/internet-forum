@@ -17,6 +17,7 @@ export type PostContextType = {
   post: PostType | null;
   setPost: React.Dispatch<React.SetStateAction<PostType | null>>;
   getSinglePost: (id: number) => Promise<void>;
+  addNewPost: (newPost: PostType) => void
 };
 
 export const PostContext = createContext<PostContextType>(
@@ -65,13 +66,17 @@ export const PostContextProvider = ({ children }: Props) => {
     }
   };
 
+  const addNewPost = (newPost: PostType) => {
+    setPosts((prevPosts) => [...prevPosts, newPost]);
+  };
+
   useEffect(() => {
     getPosts();
   }, []);
 
   return (
     <PostContext.Provider
-      value={{ posts, setPosts, post, setPost, getSinglePost }}
+      value={{ posts, setPosts, post, setPost, getSinglePost, addNewPost }}
     >
       {children}
     </PostContext.Provider>
