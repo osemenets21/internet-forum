@@ -6,53 +6,39 @@ export type UserType = {
   lastName: string;
 };
 
-type Props = {
-    children: JSX.Element;
-}
+export type Props = {
+  children: JSX.Element;
+};
 
 export type UserContextType = {
-  users?: UserType[];
+  users: UserType[];
 };
 
-export const UserContext = createContext<UserContextType | undefined>(
-  undefined
+export const UserContext = createContext<UserContextType>(
+  {} as UserContextType
 );
 
-export const useUser = () => {
-  const context = useContext(UserContext);
-  if (!context) {
-    throw new Error("useUser must be used within a UserProvider");
-  }
-  return context;
-};
-
 export const UserContextProvider = ({ children }: Props) => {
-    const [users, setUsers] = useState<UserType[] | undefined>()
+  const [users, setUsers] = useState<UserType[]>([]);
 
-    
-const getUsers = async () => {
+  const getUsers = async () => {
     try {
-        const response = await fetch('https://dummyjson.com/users');
-        if (!response.ok) throw new Error(`Can't get users from server`)
+      const response = await fetch("https://dummyjson.com/users");
+      if (!response.ok) throw new Error(`Can't get users from server`);
 
-        const {users} = await response.json()
+      const { users } = await response.json();
 
-        console.log(users);
-    
-
+      setUsers(users);
     } catch (error) {
-        console.log(error);
+      console.log(error);
     }
-}
+  };
 
-    useEffect(() => {
-        getUsers();
-    }, [])
+  useEffect(() => {
+    getUsers();
+  }, []);
 
-    return(
-        <UserContext.Provider value={{users}}>
-            {children}
-        </UserContext.Provider>
-    )
-}
-
+  return (
+    <UserContext.Provider value={{ users }}>{children}</UserContext.Provider>
+  );
+};
