@@ -3,7 +3,7 @@ import { PostContext } from "../../context/PostContext";
 import { IoMdHeart, IoMdHeartEmpty } from "react-icons/io";
 
 type PostId = {
-    postId: number; // Popraw typ właściwości na 'postId'
+    postId: number; 
     post: any;
   };
 
@@ -23,7 +23,7 @@ export const Like = ( { postId, post }: PostId) => {
 
   return (
     <span onClick={() => changeLikeHandler(postId)}>
-      {post.like ? <IoMdHeart /> : <IoMdHeartEmpty />}
+      {post.like ? <IoMdHeart color={'red'} size={"23px"}/> : <IoMdHeartEmpty size={"23px"}/>}
     </span>
   );
 };

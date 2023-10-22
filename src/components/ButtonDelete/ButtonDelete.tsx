@@ -1,5 +1,6 @@
 import React, { useContext } from 'react'
 import { PostContext } from '../../context/PostContext';
+import './ButtonDelete.scss'
 
 type ButtonDeleteProps = {
   postId: number;
@@ -21,6 +22,6 @@ export const ButtonDelete: React.FC<ButtonDeleteProps> = ({ postId }) => {
       };
 
   return (
-    <button onClick={() => handleDeletePost(postId)}>Usuń</button>
+    <button onClick={() => handleDeletePost(postId)} className='btn-delete'>Usuń</button>
     )
 }

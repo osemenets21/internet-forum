@@ -12,6 +12,10 @@ export type Props = {
 
 export type UserContextType = {
   users: UserType[];
+  token: string;
+  setToken: React.Dispatch<React.SetStateAction<string>>;
+  redirect: boolean;
+  setRedirect: React.Dispatch<React.SetStateAction<boolean>>
 };
 
 export const UserContext = createContext<UserContextType>(
@@ -20,6 +24,9 @@ export const UserContext = createContext<UserContextType>(
 
 export const UserContextProvider = ({ children }: Props) => {
   const [users, setUsers] = useState<UserType[]>([]);
+  const [token, setToken] = useState<string>("");
+  const [redirect, setRedirect] = useState(false); 
+
 
   const getUsers = async () => {
     try {
@@ -39,6 +46,6 @@ export const UserContextProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ users }}>{children}</UserContext.Provider>
+    <UserContext.Provider value={{ users, token, setToken, redirect, setRedirect }}>{children}</UserContext.Provider>
   );
 };

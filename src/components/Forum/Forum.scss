@@ -1,0 +1,83 @@
+// Forum.scss
+
+.header {
+    background-color: #333;
+    color: #fff;
+    padding: 20px;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  
+    h1 {
+      font-size: 24px;
+      margin: 0;
+      background-color: transparent;
+    }
+  
+    .btn-login {
+      background-color: #007bff;
+      color: #fff;
+      text-decoration: none;
+      padding: 10px 20px;
+      border-radius: 5px;
+      font-size: 16px;
+      transition: background-color 0.3s;
+  
+      &:hover {
+        background-color: #0056b3;
+      }
+    }
+
+    .btn-new-post {
+        background-color: #4caf50;
+        color: #fff;
+        text-decoration: none;
+        padding: 10px 20px;
+        border-radius: 5px;
+        font-size: 16px;
+        transition: background-color 0.3s;
+      
+        &:hover {
+          background-color: #45a049;
+        }
+      }
+      
+  }
+  
+  ul {
+    list-style: none;
+    padding: 0;
+    .action-wrapper {
+        display: flex;
+        align-items: center;
+    }
+  
+    li {
+      margin-bottom: 20px;
+      border: 1px solid #ccc;
+      padding: 20px;
+      border-radius: 5px;
+      box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+  
+      .post-title {
+        text-decoration: none;
+  
+        h3 {
+          font-size: 20px;
+          margin: 0;
+          color: #333;
+          transition: color 0.3s;
+  
+          &:hover {
+            color: #007bff;
+          }
+        }
+      }
+  
+      .post-text {
+        margin-top: 10px;
+        color: #555;
+      }
+    }
+  }
+  
