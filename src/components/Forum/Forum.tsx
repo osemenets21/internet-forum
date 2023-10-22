@@ -14,17 +14,23 @@ export const Forum = () => {
     <div>
       <div className="header">
         <h1>Forum</h1>
-
-        {redirect && (
-          <Link to="/new-post" className="btn-new-post">
-            Create new post
-          </Link>
-        )}
-        {!redirect && (
-          <Link to="/login" className="btn-login">
-            Log In
-          </Link>
-        )}
+        <div className="btn-wrapper">
+          {redirect && (
+            <Link to="/favorites" className="btn-favorites">
+              Favorites
+            </Link>
+          )}
+          {redirect && (
+            <Link to="/new-post" className="btn-new-post">
+              Create new post
+            </Link>
+          )}
+          {!redirect && (
+            <Link to="/login" className="btn-login">
+              Log In
+            </Link>
+          )}
+        </div>
       </div>
 
       {posts.map((post) => (
