@@ -43,7 +43,11 @@ export const Forum = () => {
             <p className="post-text">{post.body}</p>
             {redirect && (
               <div className="action-wrapper">
-                <Like postId={post.id} post={post} />
+                <div>
+                  {" "}
+                  <Like postId={post.id} post={post} />
+                </div>
+
                 <ButtonDelete postId={post.id} />
               </div>
             )}
