@@ -11,7 +11,6 @@ export const NewPost = () => {
   const [body, setBody] = useState("");
   const { redirect } = useContext(UserContext);
 
-
   const handleSubmit = (e: any) => {
     e.preventDefault();
 
@@ -33,14 +32,15 @@ export const NewPost = () => {
     setBody("");
   };
 
- 
   if (!redirect) {
     return <Navigate to="/login" />;
   }
 
   return (
     <>
-      <Link to="/forum" className="btn-return">Return to forum</Link>
+      <Link to="/forum" className="btn-return">
+        Return to forum
+      </Link>
       <form className="form" onSubmit={handleSubmit}>
         <label htmlFor="title" className="label">
           Create new post

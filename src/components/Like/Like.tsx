@@ -18,7 +18,7 @@ export const Like = ({ postId, post }: PostId) => {
 
   const changeLikeHandler = (id: number) => {
     const updatedPosts = posts.map((p) =>
-      p.id === id ? { ...p, like: !post.like } : p
+      p.id === id ? { ...p, like: !post.like } : p,
     );
 
     setPosts(updatedPosts);

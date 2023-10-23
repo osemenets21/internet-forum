@@ -2,7 +2,7 @@ import React, { useContext } from "react";
 import { PostContext } from "../../context/PostContext";
 import { ButtonDelete } from "../ButtonDelete/ButtonDelete";
 import { Like } from "../Like/Like";
-import { Link, Navigate } from "react-router-dom";
+import { Link } from "react-router-dom";
 import { UserContext } from "../../context/UserContext";
 import "./Forum.scss";
 

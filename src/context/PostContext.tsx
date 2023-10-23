@@ -1,4 +1,4 @@
-import React, { createContext, useContext, useEffect, useState } from "react";
+import React, { createContext, useEffect, useState } from "react";
 
 export type PostType = {
   id: number;
@@ -17,11 +17,11 @@ export type PostContextType = {
   post: PostType | null;
   setPost: React.Dispatch<React.SetStateAction<PostType | null>>;
   getSinglePost: (id: number) => Promise<void>;
-  addNewPost: (newPost: PostType) => void
+  addNewPost: (newPost: PostType) => void;
 };
 
 export const PostContext = createContext<PostContextType>(
-  {} as PostContextType
+  {} as PostContextType,
 );
 
 export const PostContextProvider = ({ children }: Props) => {

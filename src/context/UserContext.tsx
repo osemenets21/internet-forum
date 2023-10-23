@@ -1,4 +1,4 @@
-import { createContext, useContext, useEffect, useState } from "react";
+import { createContext, useEffect, useState } from "react";
 
 export type UserType = {
   id: number;
@@ -15,18 +15,17 @@ export type UserContextType = {
   token: string;
   setToken: React.Dispatch<React.SetStateAction<string>>;
   redirect: boolean;
-  setRedirect: React.Dispatch<React.SetStateAction<boolean>>
+  setRedirect: React.Dispatch<React.SetStateAction<boolean>>;
 };
 
 export const UserContext = createContext<UserContextType>(
-  {} as UserContextType
+  {} as UserContextType,
 );
 
 export const UserContextProvider = ({ children }: Props) => {
   const [users, setUsers] = useState<UserType[]>([]);
   const [token, setToken] = useState<string>("");
-  const [redirect, setRedirect] = useState(false); 
-
+  const [redirect, setRedirect] = useState(false);
 
   const getUsers = async () => {
     try {
@@ -46,6 +45,10 @@ export const UserContextProvider = ({ children }: Props) => {
   }, []);
 
   return (
-    <UserContext.Provider value={{ users, token, setToken, redirect, setRedirect }}>{children}</UserContext.Provider>
+    <UserContext.Provider
+      value={{ users, token, setToken, redirect, setRedirect }}
+    >
+      {children}
+    </UserContext.Provider>
   );
 };

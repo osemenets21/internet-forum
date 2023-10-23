@@ -5,9 +5,9 @@
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
-  }
-  
-  .btn-forum-2 {
+}
+
+.btn-forum-2 {
     background-color: #007bff;
     color: #fff;
     padding: 10px 20px;
@@ -22,29 +22,29 @@
     transition: background-color 0.3s;
 
     &:hover {
-      background-color: #0056b3;
+        background-color: #0056b3;
     }
-  }
-  .post-container {
+}
+
+.post-container {
     margin: 20px 0;
     padding: 20px;
     border: 1px solid #ccc;
     border-radius: 5px;
     box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
     background-color: #9dc3bed8;
-  
+
     h3 {
-      font-size: 24px;
-      margin-bottom: 10px;
-      background-color: transparent;
+        font-size: 24px;
+        margin-bottom: 10px;
+        background-color: transparent;
     }
-  
+
     p {
-      font-size: 18px;
-      margin-bottom: 20px;
-      background-color: transparent;
+        font-size: 18px;
+        margin-bottom: 20px;
+        background-color: transparent;
     }
-  
-   
-  }
-  
+
+
+}

@@ -1,47 +1,45 @@
-// Home.scss
-
 .home-container {
     text-align: center;
     padding: 20px;
-  
-    h1 {
-      font-size: 24px;
-      margin-bottom: 20px;
-    }
-  
-    .info {
-      font-size: 18px;
-      margin-bottom: 10px;
-    }
-  
-    button {
-      background-color: #007bff;
-      color: #fff;
-      padding: 10px 20px;
-      border: none;
-      border-radius: 3px;
-      font-size: 16px;
-      cursor: pointer;
-      transition: background-color 0.3s;
-      margin-top: 10px; // Dodany odstęp z góry
-  
-      &:hover {
-        background-color: #0056b3;
-      }
-    }
-  
-    .loading {
-      font-size: 20px;
-      margin: 20px;
-    }
-  }
-  
-  .btn-wrapper {
-    display: flex;
-    justify-content: start;
-  }
 
-  .btn-login {
+    h1 {
+        font-size: 24px;
+        margin-bottom: 20px;
+    }
+
+    .info {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+
+    button {
+        background-color: #007bff;
+        color: #fff;
+        padding: 10px 20px;
+        border: none;
+        border-radius: 3px;
+        font-size: 16px;
+        cursor: pointer;
+        transition: background-color 0.3s;
+        margin-top: 10px; // Dodany odstęp z góry
+
+        &:hover {
+            background-color: #0056b3;
+        }
+    }
+
+    .loading {
+        font-size: 20px;
+        margin: 20px;
+    }
+}
+
+.btn-wrapper {
+    display: flex;
+    justify-content: flex-start;
+}
+
+.btn-login {
     background-color: #11c05a;
     color: #fff;
     text-decoration: none;
@@ -49,10 +47,9 @@
     border-radius: 5px;
     font-size: 16px;
     transition: background-color 0.3s;
-    margin-top: 10px; 
-  
+    margin-top: 10px;
+
     &:hover {
-      background-color: #0056b3;
+        background-color: #0056b3;
     }
-  }
-  
+}

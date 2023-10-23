@@ -7,7 +7,7 @@ import { UserContextProvider } from "./context/UserContext";
 import { PostContextProvider } from "./context/PostContext";
 
 const root = ReactDOM.createRoot(
-  document.getElementById("root") as HTMLElement
+  document.getElementById("root") as HTMLElement,
 );
 
 root.render(
@@ -17,5 +17,5 @@ root.render(
         <App />
       </BrowserRouter>
     </PostContextProvider>
-  </UserContextProvider>
+  </UserContextProvider>,
 );
