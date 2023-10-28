@@ -11,12 +11,14 @@
     ],
     "parser": "@typescript-eslint/parser",
     "parserOptions": {
-      "project": "./tsconfig.json",
       "ecmaVersion": "latest",
       "sourceType": "module",
       "ecmaFeatures": {
         "jsx": true
-      }
+      },
+      "project": "./tsconfig.json",
+      "parser": "@typescript-eslint/parser",
+      "tsconfigRootDir": "D:/internet-forum"
     },
     "plugins": ["react", "@typescript-eslint", "prettier"],
     "rules": {
@@ -29,4 +31,3 @@
       ]
     }
   }
-  
