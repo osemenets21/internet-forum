@@ -1,5 +1,4 @@
 import React from "react";
-import "./NotFound404Page.scss";
 import "./NotFound.scss";
 
 const NotFound404Page: React.FC = () => {

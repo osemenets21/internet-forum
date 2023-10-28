@@ -18,7 +18,7 @@
       },
       "project": "./tsconfig.json",
       "parser": "@typescript-eslint/parser",
-      "tsconfigRootDir": "D:/internet-forum"
+      "tsconfigRootDir": "D:/internet-forum/internet-forum"
     },
     "plugins": ["react", "@typescript-eslint", "prettier"],
     "rules": {
